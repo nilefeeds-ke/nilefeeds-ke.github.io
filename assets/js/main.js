@@ -1,11 +1,11 @@
 window.onload = function(){
     document.body.addEventListener("DOMContentLoaded", function() {
 
-        document.querySelector('form').addEventListener('submit', handleSubmit);
+        /*document.querySelector('form').addEventListener('submit', handleSubmit);*/
     });
 
 
-    // Handle Form Submission
+  /*  // Handle Form Submission
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -15,7 +15,7 @@ window.onload = function(){
         let formData = new FormData({name, email, message});
         // TODO: complete form data processing
     }
-
+*/
 
     //Provide Window Height Per section
     const x = document.getElementsByClassName('h');
