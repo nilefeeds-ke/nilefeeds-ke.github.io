@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    color: #FFF;
+}
+
+.h,
+.nav,
+.nav .nav_links{
+    display:flex;
+}
+
+.h,
+.nav{
+    width: 100%;
+}
+
+.nav{
+    justify-content:space-between;
+}
+
+.nav .nav_links{
+    justify-content:space-evenly;
+}
+
+.h{
+    justify-content:center;
+}
+
+.h,
+.logo,
+.nav .nav_links{
+    place-items: center;
+}
+
+.banner{
+    flex-flow: column;
+}
+
+.nav .logo{
+    width: 10%;
+}
+
+.nav .nav_links{
+    width:60%;
+}
+
+
+
+
+.toTop{
+    float: right;
+    margin-right: 5px;
+    position: sticky;
+    z-index: 2;
+    bottom: 5%;
+}

@@ -16,6 +16,22 @@ window.onload = function(){
         // TODO: complete form data processing
     }
 
+
+    //Provide Window Height Per section
+    const x = document.getElementsByClassName('h');
+    for(let y in x) {
+        x[y].style = 'height: ' + window.innerHeight + 'px';
+    }
+
+    //Jump to Top
+    const to_top = document.getElementsByClassName('toTop')[0];
+    to_top.addEventListener('click', function(){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    })
+
 }
 
 // Handle Button Clicks
