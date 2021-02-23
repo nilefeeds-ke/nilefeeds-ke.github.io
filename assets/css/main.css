@@ -16,15 +16,21 @@ body,
 .about,
 .nav .logo,
 .footer,
+.product,
+.products,
 .footer .contacts,
 .footer .contacts .contact_form,
 .banner .btn,
 .nav .nav_links,
+.products_listing,
 .about .about_history,
 .footer .contacts .contact_details pre,
 .about .about_history .story,
 .about .about_history .about_image{
     display:flex;
+}
+.products_listing{
+    flex-wrap: wrap;
 }
 
 .h,
@@ -70,6 +76,7 @@ body,
 
 .nav .nav_links,
 .footer .contacts,
+.products_listing,
 .footer .contacts .contact_details pre,
 .about .about_history{
     justify-content:space-evenly;
@@ -79,18 +86,28 @@ body,
     background-color:dodgerblue;
 }
 
+
 .h,
 .banner .btn,
 .nav .logo,
+.product,
 .about .about_history .story,
 .about .about_history .about_image{
     justify-content:center;
+}
+.product{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.product img{
+    border-radius: 50%;
 }
 
 .h,
 .nav .logo,
 .footer .contacts,
 .banner .btn,
+.product,
 .nav .nav_links{
     place-items: center;
 }
@@ -99,6 +116,7 @@ body,
 .banner,
 .footer,
 .story,
+.products,
 .footer .contacts .contact_form{
     flex-flow: column;
 }
@@ -143,7 +161,11 @@ img{
     font-size: 30px;
 }
 
-
+.product{
+    max-height:200px;
+    margin-top: 10px;
+    max-width:200px;
+}
 .nav,
 .toTop{
     position: sticky;
@@ -233,13 +255,30 @@ img{
         font-size: 20px;
     }
 
+    .contact-details .social_contacts{
+        display:flex;
+    }
+
+    .contact-details .social_contacts{
+        flex-flow: row wrap;
+    }
+    .contact-details .social_contacts{
+        justify-content:space-evenly
+    }
+    .contact-details .social_contacts .a{
+        max-width: fit-content;
+    }
+
     .nav,
     .about_history,
+    .contact-details,
     .footer .contacts{
         flex-flow: column;
     }
 
     .footer .contacts,
+    .contact-details .bus_contact,
+    .contact-details .social_contacts,
     .about .about_history .about_image,
     .about .about_history .story,
     .nav .logo, .nav .nav_links{
@@ -248,6 +287,10 @@ img{
     .footer .contacts .contact-details,
     .footer .contacts .contact_form{
         width:80%;
+    }
+
+    .contact-details .bus_contact a{
+        font-size: 14px;
     }
     
 }

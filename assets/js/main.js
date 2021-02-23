@@ -56,13 +56,21 @@ const imageLazyLoad = () =>{
 
 
     async function fetchProducts(){
-
+        const products = document.querySelector('.products_listing');
+        console.log(products);
         const response = await fetch('/assets/json/main.json');
         const res = await response.json();
         console.log(res);
 
         res.forEach((item, index) =>{
-            console.log(item['url'])
+            console.log(item['url']);
+            const div = document.createElement('div');
+            div.setAttribute('class', 'product');
+            const img = document.createElement('img');
+            img.setAttribute('src', item['url']);
+            img.setAttribute('alt', item['url']);
+            div.appendChild(img);
+            products.appendChild(div);
         })
 
     }
