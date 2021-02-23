@@ -1,12 +1,26 @@
+*{
+    font-family: 'Yeseva One', cursive;
+}
 body{
     background-color: rgb(0, 0, 0);
     margin: 0;
-    color: #FFF;
 }
 
+.btn,
+body,
+.nav * a{
+    color: #FFF;
+}
 .h,
 .nav,
-.nav .nav_links{
+.about,
+.contacts,
+.nav .logo,
+.banner .btn,
+.nav .nav_links,
+.about .about_history,
+.about .about_history .story,
+.about .about_history .about_image{
     display:flex;
 }
 
@@ -19,39 +33,123 @@ body{
     justify-content:space-between;
 }
 
-.nav .nav_links{
-    justify-content:space-evenly;
+.nav{
+    height: 100px;
 }
 
-.h{
+.nav .nav_links,
+.about .about_history{
+    justify-content:space-evenly;
+}
+.btn{
+    border-radius: 5px;
+    background-color:dodgerblue;
+}
+
+.h,
+.banner .btn,
+.nav .logo,
+.contacts,
+.about .about_history .story,
+.about .about_history .about_image{
     justify-content:center;
 }
 
 .h,
-.logo,
+.nav .logo,
+.contacts,
+.banner .btn,
 .nav .nav_links{
     place-items: center;
 }
 
-.banner{
+.about,
+.banner,
+.contacts{
     flex-flow: column;
 }
 
-.nav .logo{
-    width: 10%;
+.btn,
+.nav .nav_links li{
+    cursor: pointer;
 }
+
+
+li{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.banner p{
+    font-size: 30px;
+}
+
+.nav,
+.toTop{
+    position: sticky;
+}
+.about .about_history .story,
+.about .about_history .about_image{
+    width:40%;
+}
+/*************************************************************************/
+.nav{
+    top:0;
+    z-index: 2;
+}
+
+
+.nav .logo{
+    width: 30%;
+    font-size: 40px;
+    height:100%;
+}
+.nav .logo a{
+    font-family: 'Audiowide', cursive;
+}
+
 
 .nav .nav_links{
     width:60%;
+    font-family: 'Bungee', cursive;
 }
-
-
-
 
 .toTop{
     float: right;
     margin-right: 5px;
-    position: sticky;
     z-index: 2;
     bottom: 5%;
+}
+
+.banner h1{
+    /*font-family: 'Viga', sans-serif;*/
+    font-size: 70px;
+}
+
+.banner p,
+.nav .nav_links li:hover,
+.nav .logo:hover a:hover{
+    color:dodgerblue;
+}
+
+
+
+
+.banner .btn{
+    width: 100px;
+    height:30px;
+    font-size:25px;
+}
+
+.nav_scroll{
+    box-sizing: border-box;
+    box-shadow: #FFF;
 }

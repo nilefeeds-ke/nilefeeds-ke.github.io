@@ -20,7 +20,7 @@ window.onload = function(){
     //Provide Window Height Per section
     const x = document.getElementsByClassName('h');
     for(let y in x) {
-        x[y].style = 'height: ' + window.innerHeight + 'px';
+        x[y].style = 'min-height: ' + window.innerHeight + 'px';
     }
 
     //Jump to Top
@@ -31,6 +31,8 @@ window.onload = function(){
             behavior: 'smooth'
         })
     })
+
+
 
 }
 

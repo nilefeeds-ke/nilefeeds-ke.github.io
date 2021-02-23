@@ -4,9 +4,9 @@
         <title>NileFeeds & Cereal Supplies</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-      
-        <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/typography.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        
       
         <meta name="description" content="Providing you with High Quality Animal Feeds" />
         <meta name="keywords"
@@ -51,7 +51,7 @@
     </head>
     <body>
         <nav class="nav">
-            <div class="logo"><h1>NileFeeds</h1></div>
+            <div class="logo"><h1><a href="http://nilefeeds.com" target="_self" title="Nile Feeds & Cereals Supplies"><span>[</span>NileFeeds<span>]</span></a></h1></div>
             <div class="nav_links">
                 <li>Home</li>
                 <li onclick="handleNav('about')">About Us</li>
@@ -67,7 +67,15 @@
         </div>
         <main class="main-content">
             <div id="about" class="h about">
-                <h1>[TODO: About]</h1>
+                <h1>About</h1>
+                <div class="about_history">
+                    <div class="story">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus rerum quia excepturi deserunt, quod sit reprehenderit unde autem veniam aspernatur!</p>
+                    </div>
+                    <div class="about_image">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore corrupti rerum, modi dolore corporis vitae ut aliquam officiis possimus officia sit debitis fuga iure, dolor placeat deleniti perspiciatis explicabo magni.</p>
+                    </div>
+                </div>
             </div>
            <div id="products" class="h products">
                <h1>[TODO: Products]</h1>
@@ -87,7 +95,7 @@
 
                         <label>Message:</label>
                         <textarea type="text" name="message"></textarea>
-                        <input type="submit" name="submit"/>
+                        <input class="btn" type="submit" name="submit"/>
 
                     </form>
                 </div>
@@ -101,7 +109,7 @@
             </div>
             <p>&copy; NileFeeds & Cereals Supplies <span>2021</span></p>
         </footer>
-        <button class="toTop">Top</button>
+        <button class="btn toTop">Top</button>
         <script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 </html>
