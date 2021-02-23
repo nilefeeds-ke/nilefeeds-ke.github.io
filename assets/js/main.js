@@ -32,7 +32,27 @@ window.onload = function(){
         })
     })
 
+// set box-shadow on window scroll
+window.addEventListener('scroll', function(){
 
+    const styles = `box-shadow:  5px 5px 10px #105a1f,-5px -5px 10px #40ff7b; background-color:#000000;`;
+
+    if(window.pageYOffset>20){
+        document.getElementsByClassName('nav')[0].style= styles;
+    }
+    else{
+        document.getElementsByClassName('nav')[0].style=`box-shadow:  0;`
+    }
+})
+
+// Lazy Loading Image
+const imageLazyLoad = () =>{
+    const x = document.body.getElementsByTagName('img');
+
+    for (let i in x){
+        x[i].setAttribute('loading', 'lazy');
+    }
+}
 
 }
 
@@ -49,15 +69,3 @@ function handleNav(id){
 }
 
 
-// set box-shadow on window scroll
-window.addEventListener('scroll', function(){
-
-    const styles = `box-shadow:  5px 5px 10px #105a1f,-5px -5px 10px #40ff7b; background-color:#000000;`;
-
-    if(window.pageYOffset>20){
-        document.getElementsByClassName('nav')[0].style= styles;
-    }
-    else{
-        document.getElementsByClassName('nav')[0].style=`box-shadow:  0;`
-    }
-})

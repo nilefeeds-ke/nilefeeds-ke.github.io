@@ -98,6 +98,7 @@ body,
 .about,
 .banner,
 .footer,
+.story,
 .footer .contacts .contact_form{
     flex-flow: column;
 }
@@ -141,6 +142,7 @@ img{
 .banner p{
     font-size: 30px;
 }
+
 
 .nav,
 .toTop{
