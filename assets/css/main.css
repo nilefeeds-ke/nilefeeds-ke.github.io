@@ -14,8 +14,10 @@ body,
 .h,
 .nav,
 .about,
-.contacts,
 .nav .logo,
+.footer,
+.footer .contacts,
+.footer .contacts .contact_form,
 .banner .btn,
 .nav .nav_links,
 .about .about_history,
@@ -25,8 +27,25 @@ body,
 }
 
 .h,
-.nav{
+.nav,
+.footer .contacts,
+.footer .contacts .contact_form label,
+.footer .contacts .contact_form input,
+.footer .contacts .contact_form textarea{
     width: 100%;
+}
+
+.footer .contacts .contact_form label,
+.footer .contacts .contact_form input,
+.footer .contacts .contact_form textarea{
+    min-height:30px;
+    border-radius: 5px;
+    margin-top:10px;
+    outline:none;
+    border:none;
+}
+.footer .contacts .contact_form textarea{
+    min-height: 100px;
 }
 
 .nav{
@@ -38,6 +57,7 @@ body,
 }
 
 .nav .nav_links,
+.footer .contacts,
 .about .about_history{
     justify-content:space-evenly;
 }
@@ -49,7 +69,6 @@ body,
 .h,
 .banner .btn,
 .nav .logo,
-.contacts,
 .about .about_history .story,
 .about .about_history .about_image{
     justify-content:center;
@@ -57,7 +76,7 @@ body,
 
 .h,
 .nav .logo,
-.contacts,
+.footer .contacts,
 .banner .btn,
 .nav .nav_links{
     place-items: center;
@@ -65,7 +84,8 @@ body,
 
 .about,
 .banner,
-.contacts{
+.footer,
+.footer .contacts .contact_form{
     flex-flow: column;
 }
 
@@ -152,4 +172,8 @@ img{
 .nav_scroll{
     box-sizing: border-box;
     box-shadow: #FFF;
+}
+
+.footer .contacts .contact_form{
+    width:40%;
 }
