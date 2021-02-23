@@ -54,6 +54,21 @@ const imageLazyLoad = () =>{
     }
 }
 
+
+    async function fetchProducts(){
+
+        const response = await fetch('/assets/json/main.json');
+        const res = await response.json();
+        console.log(res);
+
+        res.forEach((item, index) =>{
+            console.log(item['url'])
+        })
+
+    }
+
+    fetchProducts();
+
 }
 
 // Handle Button Clicks
