@@ -1,5 +1,6 @@
 window.onload = function(){
     document.body.addEventListener("DOMContentLoaded", function() {
+        
 
         /*document.querySelector('form').addEventListener('submit', handleSubmit);*/
     });
@@ -57,13 +58,13 @@ const imageLazyLoad = () =>{
 
     async function fetchProducts(){
         const products = document.querySelector('.products_listing');
-        console.log(products);
+
         const response = await fetch('/assets/json/main.json');
         const res = await response.json();
-        console.log(res);
+
 
         res.forEach((item, index) =>{
-            console.log(item['url']);
+
             const div = document.createElement('div');
             div.setAttribute('class', 'product');
             const img = document.createElement('img');
@@ -72,11 +73,13 @@ const imageLazyLoad = () =>{
             div.appendChild(img);
             products.appendChild(div);
         })
-
     }
 
-    fetchProducts();
 
+    
+
+    
+fetchProducts();
 }
 
 // Handle Button Clicks

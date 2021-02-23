@@ -60,7 +60,7 @@ body,
 .footer .contacts .contact_form textarea{
     min-height: 100px;
 }
-
+.products_listing,
 .nav{
     justify-content:space-between;
 }
@@ -77,7 +77,7 @@ body,
 
 .nav .nav_links,
 .footer .contacts,
-.products_listing,
+
 .footer .contacts .contact_details pre,
 .about .about_history{
     justify-content:space-evenly;
@@ -97,11 +97,11 @@ body,
     justify-content:center;
 }
 .product{
-    border-radius: 50%;
     overflow: hidden;
 }
 .product img{
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .h,
@@ -162,11 +162,7 @@ img{
     font-size: 30px;
 }
 
-.product{
-    max-height:200px;
-    margin-top: 10px;
-    max-width:200px;
-}
+
 .nav,
 .toTop{
     position: sticky;
@@ -240,10 +236,31 @@ img{
     font-size: 30px;
     background-color:transparent;
 }
+.product{
+    height:200px;
+    width:200px;
+}
+.products_listing{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    gap: 10px;
+}
+
+.products .products_showcase{
+    display:flex;
+    width: 50%;
+    place-items: center;
+    justify-content:center;
+    z-index: 10;
+    height:50%;
+    position:absolute;
+    visibility: hidden;
+}
+
 
 /****************************** RESPONSIVE **************************************************************************/
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:900px){
     .nav{
         height:100px;
     }
@@ -293,5 +310,13 @@ img{
     .contact-details .bus_contact a{
         font-size: 14px;
     }
-    
+    .products_listing{
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-gap: 35px;
+    }
+    .product{
+        max-height:100px;
+        max-width:100px;
+    }
 }
