@@ -8,6 +8,7 @@ body{
 
 .btn,
 body,
+.nav .nav_links li a,
 .nav * a{
     color: #FFF;
 }
