@@ -21,6 +21,7 @@ body,
 .banner .btn,
 .nav .nav_links,
 .about .about_history,
+.footer .contacts .contact_details pre,
 .about .about_history .story,
 .about .about_history .about_image{
     display:flex;
@@ -28,13 +29,17 @@ body,
 
 .h,
 .nav,
+.about_history p,
 .footer .contacts,
+.main-content,
+.copyright,
 .footer .contacts .contact_form label,
 .footer .contacts .contact_form input,
 .footer .contacts .contact_form textarea{
     width: 100%;
 }
 
+.toTop,
 .footer .contacts .contact_form label,
 .footer .contacts .contact_form input,
 .footer .contacts .contact_form textarea{
@@ -56,8 +61,15 @@ body,
     height: 100px;
 }
 
+
+.copyright,
+.banner{
+    text-align:center;
+}
+
 .nav .nav_links,
 .footer .contacts,
+.footer .contacts .contact_details pre,
 .about .about_history{
     justify-content:space-evenly;
 }
@@ -94,6 +106,23 @@ body,
     cursor: pointer;
 }
 
+.fa-phone-alt{
+    color: green;
+}
+
+.fa-whatsapp{
+    color:rgb(138, 32, 138);
+    border-radius: 50%;
+}
+.fa-twitter{
+    color:dodgerblue;
+}
+.fa-facebook-messenger{
+    color:rgb(81, 81, 216);
+}
+.fa-envelope{
+    color:rgb(0, 119, 128);
+}
 
 li{
     list-style:none;
@@ -119,11 +148,12 @@ img{
 .about .about_history .story,
 .about .about_history .about_image{
     width:40%;
+    text-align:center;
 }
 /*************************************************************************/
 .nav{
     top:0;
-    z-index: 2;
+    z-index: 10;
 }
 
 
@@ -142,12 +172,7 @@ img{
     font-family: 'Bungee', cursive;
 }
 
-.toTop{
-    float: right;
-    margin-right: 5px;
-    z-index: 2;
-    bottom: 5%;
-}
+
 
 .banner h1{
     /*font-family: 'Viga', sans-serif;*/
@@ -159,9 +184,6 @@ img{
 .nav .logo:hover a:hover{
     color:dodgerblue;
 }
-
-
-
 
 .banner .btn{
     width: 100px;
@@ -176,4 +198,53 @@ img{
 
 .footer .contacts .contact_form{
     width:40%;
+}
+
+.footer a{
+    color:#FFF;
+    font-size:30px;
+    border-radius: 50%;
+}
+
+.toTop{
+    float: right;
+    margin-right: 5px;
+    z-index: 2;
+    bottom: 5%;
+    font-size: 30px;
+    background-color:transparent;
+}
+
+/****************************** RESPONSIVE **************************************************************************/
+
+@media only screen and (max-width:600px){
+    .nav{
+        height:100px;
+    }
+    .nav .nav_links{
+        height: 20px;
+        margin-bottom:25px;
+    }
+    .nav .logo{
+        height:60px;
+        font-size: 20px;
+    }
+
+    .nav,
+    .about_history,
+    .footer .contacts{
+        flex-flow: column;
+    }
+
+    .footer .contacts,
+    .about .about_history .about_image,
+    .about .about_history .story,
+    .nav .logo, .nav .nav_links{
+        width:100%;
+    }
+    .footer .contacts .contact-details,
+    .footer .contacts .contact_form{
+        width:80%;
+    }
+    
 }
