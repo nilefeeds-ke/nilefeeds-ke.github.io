@@ -1,5 +1,7 @@
 *{
-    font-family: 'Yeseva One', cursive;
+    font-family: masqualero, sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
 body{
     background-color: rgb(0, 0, 0);
@@ -40,6 +42,7 @@ body,
 .footer .contacts,
 .main-content,
 .copyright,
+.about .about_history .about_image,
 .footer .contacts .contact_form label,
 .footer .contacts .contact_form input,
 .footer .contacts .contact_form textarea{
@@ -61,6 +64,7 @@ body,
     min-height: 100px;
 }
 .products_listing,
+.about .about_history,
 .nav{
     justify-content:space-between;
 }
@@ -71,6 +75,7 @@ body,
 
 
 .copyright,
+.about .about_history .story,
 .banner{
     text-align:center;
 }
@@ -78,8 +83,7 @@ body,
 .nav .nav_links,
 .footer .contacts,
 
-.footer .contacts .contact_details pre,
-.about .about_history{
+.footer .contacts .contact_details pre{
     justify-content:space-evenly;
 }
 .btn{
@@ -167,12 +171,18 @@ img{
 .toTop{
     position: sticky;
 }
-.about .about_history .story,
+
+.about .about_history {
+    width:80%;
+}
 .about .about_history .about_image{
-    width:40%;
-    text-align:center;
+    width: 100%;
 }
 /*************************************************************************/
+
+
+
+
 .nav{
     top:0;
     z-index: 10;
@@ -247,6 +257,14 @@ img{
    
 }
 
+.about{
+    background-image: linear-gradient(to right, rgb(34, 9, 9), rgb(131, 96, 67), rgb(241, 68, 0)),url('https://i.postimg.cc/Zn0GyfWb/fields.jpg');
+    background-attachment: fixed;
+    background-size: 60% 80%;
+    background-position: left center;
+    background-blend-mode:multiply;
+    background-repeat: no-repeat;
+}
 
 .products .products_showcase{
     display:flex;
@@ -258,6 +276,12 @@ img{
     position:absolute;
     visibility: hidden;
 }
+
+.story{
+    width: 40%;
+}
+
+
 
 
 /****************************** RESPONSIVE **************************************************************************/
@@ -315,10 +339,15 @@ img{
     .products_listing{
         display: grid;
         grid-template-columns: 2fr 2fr 2fr;
-        grid-gap: 35px;
+        gap:2px;
     }
     .product{
-        max-height:100px;
-        max-width:100px;
+        max-height:80px;
+        max-width:80px;
+    }
+
+    .about{
+        background-size: cover;
+        background-attachment: fixed;
     }
 }
