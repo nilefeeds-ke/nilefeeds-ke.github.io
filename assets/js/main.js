@@ -1,10 +1,5 @@
 window.onload = function(){
-    let url = document.location.href;
-    const canonicalElement = document.querySelector('link[rel=canonical]');
-    if (canonicalElement !== null) {
-        url = canonicalElement.href;
-    }
-    navigator.share({url});
+
     document.body.addEventListener("DOMContentLoaded", function() {
         
 
