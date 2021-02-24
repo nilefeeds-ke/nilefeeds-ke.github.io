@@ -1,4 +1,10 @@
 window.onload = function(){
+    let url = document.location.href;
+    const canonicalElement = document.querySelector('link[rel=canonical]');
+    if (canonicalElement !== null) {
+        url = canonicalElement.href;
+    }
+    navigator.share({url});
     document.body.addEventListener("DOMContentLoaded", function() {
         
 
@@ -68,7 +74,7 @@ window.onload = function(){
             const div = document.createElement('div');
             div.setAttribute('class', 'product');
             const img = document.createElement('img');
-            img.setAttribute('src', item['url']);
+            img.setAttribute('src', item['url']+"?quality=auto&size=300w300h&format=webp");
             img.setAttribute('alt', item['url']);
             div.appendChild(img);
             products.appendChild(div);
