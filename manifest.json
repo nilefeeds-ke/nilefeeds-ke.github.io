@@ -2,10 +2,23 @@
     "name": "Nile Feeds & Cereals Supplies",
     "short_name": "NileFeeds",
     "description": "Providing You With High-Quality Animal Feeds",
-    "start_url": "/",
+    "start_url": ".",
     "display": "standalone",
     "orientation": "any",
     "lang": "English",
     "background_color":"#000000",
-    "theme_color": "dodgerblue"
+    "theme_color": "dodgerblue",
+    "icons": [
+        {
+          "src": "assets/images/logo-bigger255.png",
+          "sizes": "255x255",
+          "type": "image/png",
+          "purpose": "any maskable"
+        },
+        {
+            "src": "assets/images/evenbiggerlogo.png",
+            "sizes": "513x513",
+            "type": "image/png"
+          }
+      ]
 }
