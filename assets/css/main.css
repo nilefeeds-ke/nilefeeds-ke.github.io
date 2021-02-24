@@ -49,6 +49,10 @@ body,
     width: 100%;
 }
 
+.footer .contacts .contact_form input,
+.footer .contacts .contact_form label{
+    margin: 10px;
+}
 .toTop,
 .banner .btn,
 .footer .contacts .contact_form label,
