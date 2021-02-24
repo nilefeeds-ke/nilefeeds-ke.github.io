@@ -2,7 +2,6 @@
 <html amp>
     <head>
         <title>NileFeeds & Cereal Supplies</title>
-        <title>NileFeeds & Cereal Supplies</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/typography.css" as="styles"/>
@@ -35,7 +34,6 @@
         <meta property="og:url" content="https://nilefeeds.com/" />
         <meta property="og:description" content="Providing You With High Quality Animal Feeds" />
         <meta property="og:image" content="assets/images/niles.png" />
-        <link rel="preload" href="/assets/css/typography.css" as="font" type="font/woff2" crossorigin> 
         <link rel="canonical" href="index.html">
         
       
@@ -75,7 +73,7 @@
         <div class="h banner">
             <h1>Nile Feeds & Cereals Supplies</h1>
             <p>Providing You With High Quality Animal Feeds</p>
-            <button class="btn banner-btn" onclick="handleNav('about')">About</button>
+            <button class="btn banner-btn" aria-label="about" onclick="handleNav('about')">About</button>
         </div>
         <main class="main-content">
             <div id="about" class="h about">
@@ -118,14 +116,14 @@
                     <form name="contact" method="post" netifly data-netifly="true" >
 
                         <label>Name:</label>
-                        <input type="text" name="name" required/>
+                        <input type="text" aria-label="Contact Name" name="name" required />
 
                         <label>Email:</label>
-                        <input type="email" name="email" required/>
+                        <input type="email" aria-label="Email address" name="email" required />
 
                         <label>Message:</label>
-                        <textarea type="text" name="message"></textarea>
-                        <input class="btn" type="submit" name="submit"/>
+                        <textarea type="text" aria-label="Message" name="message"></textarea>
+                        <input class="btn" id="send_airtable" type="submit" aria-label="submit form" name="submit"/>
 
                     </form>
                 </div>
@@ -145,5 +143,6 @@
         </footer>
         <button class="btn toTop"><i class="fas fa-arrow-up"></i></button>
         <script type="text/javascript" src="assets/js/main.js"></script>
+        <script src="assets/js/airtable.js"></script>
     </body>
 </html>

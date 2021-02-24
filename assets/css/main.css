@@ -73,6 +73,9 @@ body,
     height: 100px;
 }
 
+.footer .contacts .contact_form textarea{
+    padding:10px;
+}
 
 .copyright,
 .about .about_history .story,
@@ -82,7 +85,6 @@ body,
 
 .nav .nav_links,
 .footer .contacts,
-
 .footer .contacts .contact_details pre{
     justify-content:space-evenly;
 }

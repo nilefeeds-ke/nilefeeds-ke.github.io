@@ -75,12 +75,10 @@ window.onload = function(){
         })
     })();
 
+    const n = document.getElementById('send_airtable');
+    n.addEventListener('click',submitForm);
 
 
-    
-
-
-    
 
 }
 
@@ -97,3 +95,50 @@ function handleNav(id){
 }
 
 
+function submitForm(event){
+    event.preventDefault();
+    
+
+    const d = document.querySelector("form");
+
+    const name = d['name'].value;
+    const email = d['email'].value;
+    const message = d['message'].value;
+    if(name === '' || name === null){
+        alert('Please enter a name');
+    }
+
+
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('POST', 'https://api.airtable.com/v0/appjVyjR6lG12Wdx7/Nile', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer keyuOaEMS1bxTdQ7r');
+    if(name !== "" && name !== null){
+        if(email !=="" && email !== null)
+        {
+            xhr.send(JSON.stringify({
+                "fields":{
+                    'email': email,
+                    'Name': name,
+                    'Message': message
+                }
+            }));
+
+            d['name'].value = '';
+            d['email'].value = '';
+            d['message'].value = '';       
+        }
+        else{
+            alert('Please enter a email');
+        }
+      
+    }
+    else{
+        alert('Please enter a name');
+    }
+
+
+    
+}
