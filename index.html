@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html amp>
     <head>
         <title>NileFeeds & Cereal Supplies</title>
         <title>NileFeeds & Cereal Supplies</title>
@@ -34,18 +35,25 @@
         <meta property="og:url" content="https://nilefeeds.com/" />
         <meta property="og:description" content="Providing You With High Quality Animal Feeds" />
         <meta property="og:image" content="assets/images/niles.png" />
+        <link rel="canonical" href="index.html">
+        
       
         <!-- Google Knowledge Graph card -->
         <script type="application/ld+json">
           {
             "@context": "http://www.schema.org",
             "@type": "Organization",
+            "headline": "Providing You With High Quality Animal Feeds",
             "name": "Nile Feeds & Cereals Supplies",
             "url": "https://nilefeeds.com/",
-            "logo": "assets/images/niles.png",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "assets/images/niles.png"
+            },
             "description": "Providing You With High Quality Animal Feeds"
           }
         </script>
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/images/niles.png" alt="nilefeeds and cereals supplies"/>
         <script src="https://kit.fontawesome.com/6f6413467b.js" crossorigin="anonymous"></script>
