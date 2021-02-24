@@ -65,11 +65,8 @@
     </head>
     <body>
         <script async defer>
-            window.addEventListener("load", () => {
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker.register("pwabuilder-sw.js");
-            }
-            });
+            const el = document.createElement('pwa-update');
+            document.body.appendChild(el);
         </script>
         <nav class="nav">
             <div class="logo"><h1><a href="https://nilefeeds.com" target="_self" title="Nile Feeds & Cereals Supplies"><span>[</span>NileFeeds<span>]</span></a></h1></div>
@@ -153,6 +150,11 @@
             <p class="copyright md-light">&copy; NileFeeds & Cereals Supplies <span>2021</span></p>
         </footer>
         <button class="btn toTop"><i class="fas fa-arrow-up"></i></button>
+
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js">
+            const el = document.createElement('pwa-update');
+            document.body.appendChild(el);
+        </script>
         <script type="text/javascript" src="assets/js/main.js" async defer></script>
         <script src="assets/js/airtable.js" async defer></script>
     </body>
