@@ -5,5 +5,7 @@
     "start_url": "/",
     "display": "standalone",
     "orientation": "any",
-    "lang": "English"
+    "lang": "English",
+    "background_color":"#000000",
+    "theme_color": "dodgerblue"
 }
