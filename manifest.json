@@ -1,0 +1,8 @@
+{
+    "name": "Nile Feeds & Cereals Supplies",
+    "short_name": "NileFeeds",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0000",
+    "description": "Providing you with High Quality Animal Feeds."
+}
