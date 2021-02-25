@@ -9,13 +9,15 @@ const cacheAssets = [
     "./assets/css/typography.css",
     "./assets/json/main.json",
     "./assets/images/logo.png",
-    "./assets/images/logo-bigger255.png"
+    "./assets/images/logo-bigger255.png",
+    "./sw.js",
+    "./sw_cached_site.js"
 ];
 
 self.addEventListener("install", e => {
     e.waitUntil(
         caches.open(cacheName).then(cache => {
-            console.log("ServiceWorker: Caching Files");
+            //console.log("ServiceWorker: Caching Files");
             return cache.addAll(cacheAssets);
         })
         .then(() => self.skipWaiting())
@@ -31,7 +33,7 @@ self.addEventListener("activate", e => {
             return Promise.all(
                 cacheNames.map(cache => {
                     if(cache !== cacheName){
-                        console.log("Service worker clearing old cache: " + cache);
+                        //console.log("Service worker clearing old cache: " + cache);
                         return caches.delete(cache);
                     }
                 })
@@ -44,7 +46,7 @@ self.addEventListener("activate", e => {
 
 // Call Fetch
 self.addEventListener('fetch', e => {
-    console.log("Service worker fetching");
+    //console.log("Service worker fetching");
 
     e.respondWith(
         fetch(e.request).catch(() => caches.match(e.request))

@@ -15,7 +15,7 @@ self.addEventListener("activate", e => {
             return Promise.all(
                 cacheNames.map(cache => {
                     if(cache !== cacheName){
-                        console.log("Service worker clearing old cache: " + cache);
+                        //console.log("Service worker clearing old cache: " + cache);
                         return caches.delete(cache);
                     }
                 })
@@ -28,7 +28,7 @@ self.addEventListener("activate", e => {
 
 // Call Fetch
 self.addEventListener('fetch', e => {
-    console.log("Service worker fetching");
+    //console.log("Service worker fetching");
 
     e.respondWith(
         fetch(e.request).then(response => {
